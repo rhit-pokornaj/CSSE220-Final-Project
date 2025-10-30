@@ -1,10 +1,27 @@
 package finalvers1;
 
-public class GamePanel {
+	import java.awt.BorderLayout;
+	import javax.swing.JPanel;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	/**
+	 * Controller class for the game.
+	 * Handles user input (buttons + keys) and controls the main Timer loop.
+	 */
 
-	}
+	public class GamePanel extends JPanel {
+		
+		private final GameComponent canvas = new GameComponent();
+	    
+	    /**
+	     * Constructs the main game panel with controls and keyboard support.
+	     */
+	    
+	    public GamePanel() {
+	    	this.setLayout(new BorderLayout(8, 8));
+	        this.add(canvas, BorderLayout.CENTER);
+	        this.setBackground(canvas.BG);
+	    	
+	    }
+	
 
 }
