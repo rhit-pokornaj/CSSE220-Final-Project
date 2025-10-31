@@ -19,10 +19,14 @@ public class GameComponent extends JComponent {
 	public static final Color FG = Color.BLACK;
 	Timer timer;
 	
+	// Enemy additions
+	private final Enemy badGuy = new Enemy(150, 150);
+	
 	
 	public GameComponent() {
 		this.setPreferredSize(new Dimension(WIDTH,HEIGHT));
 		//  seed a couple so something is visible immediately
+		
 
 	        	repaint();
 
@@ -32,6 +36,8 @@ public class GameComponent extends JComponent {
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			Graphics2D g2 = (Graphics2D) g;
+			
+			badGuy.draw(g2);
 
 	        }
 			
