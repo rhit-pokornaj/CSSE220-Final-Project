@@ -22,7 +22,7 @@ public class Player extends JComponent{
 		 setPreferredSize(new Dimension(WIDTH,HEIGHT));
 		 this.x = startX;
 		 this.y = startY;
-		 this.onGround = true;
+		 this.onGround = false;
 		 this.yVelocity = 0;
 
 	 }
@@ -57,7 +57,7 @@ public class Player extends JComponent{
 		 }
 		 public void jump() {
 			 if(onGround) {
-				 yVelocity=(int) JUMP_FORCE;
+				 yVelocity= JUMP_FORCE;
 				 onGround=false;
 
 			 }

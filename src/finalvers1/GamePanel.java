@@ -40,7 +40,7 @@ import javax.swing.JPanel;
 		            switch (e.getKeyCode()) {
 		                case KeyEvent.VK_LEFT -> canvas.goodGuy.moveDelta(-10);
 		                case KeyEvent.VK_RIGHT -> canvas.goodGuy.moveDelta(10);
-		                case KeyEvent.VK_SPACE -> canvas.goodGuy.jump();
+		                case KeyEvent.VK_UP -> canvas.goodGuy.jump();
 
 		            }
 		        }
