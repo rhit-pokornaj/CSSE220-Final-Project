@@ -26,9 +26,12 @@ public class GameComponent extends JComponent {
 	public GameComponent() {
 		this.setPreferredSize(new Dimension(WIDTH,HEIGHT));
 		//  seed a couple so something is visible immediately
-		
-
-	        	repaint();
+		this.setBackground(BG);
+		timer = new Timer(16,e-> {
+			goodGuy.update();
+			repaint();
+		});
+		timer.start();
 
 	}
 		

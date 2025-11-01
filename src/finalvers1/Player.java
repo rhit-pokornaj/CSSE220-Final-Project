@@ -16,7 +16,7 @@ public class Player extends JComponent{
 	 private int x;
 	 private int y;
 	 private boolean onGround;
-	 private int yVelocity;
+	 private float yVelocity;
 	 
 	 public Player(int startX,int startY) {
 		 setPreferredSize(new Dimension(WIDTH,HEIGHT));
@@ -46,8 +46,8 @@ public class Player extends JComponent{
 				 yVelocity+=GRAVITY;
 				 y+=yVelocity;
 				 
-				 if (y>=HEIGHT) {
-					 y=HEIGHT;
+				 if (y>=HEIGHT-40) {
+					 y=HEIGHT-40;
 					 yVelocity=0;
 					 onGround = true;
 				 }
