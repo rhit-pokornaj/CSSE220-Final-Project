@@ -21,7 +21,7 @@ public class GameComponent extends JComponent {
 	
 	// Enemy additions
 	private final Enemy badGuy = new Enemy(150, 150);
-	
+	public Player goodGuy = new Player(250,250);
 	
 	public GameComponent() {
 		this.setPreferredSize(new Dimension(WIDTH,HEIGHT));
@@ -38,6 +38,7 @@ public class GameComponent extends JComponent {
 			Graphics2D g2 = (Graphics2D) g;
 			
 			badGuy.draw(g2);
+			goodGuy.draw(g2);
 
 	        }
 			
